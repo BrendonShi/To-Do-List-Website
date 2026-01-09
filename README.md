@@ -58,7 +58,7 @@ If you want to clear all tasks or if you encounter database errors after changin
 ## Project Structure
 
 ```text
-daily_timer/
+day-scheduler/
 ├── app.py
 ├── schedule.db   # will generate automatically
 ├── static/
