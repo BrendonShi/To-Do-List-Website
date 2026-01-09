@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Day Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Precision Day Timer</h1>
+        <div class="clock-display" id="liveClock">00:00:00</div>
+
+        <div class="input-group">
+            <div class="field" style="flex-grow: 2;">
+                <label>Task Name</label>
+                <input type="text" id="taskName" placeholder="e.g. Work, Gym...">
+            </div>
+            <div class="field">
+                <label>Start</label>
+                <input type="time" id="startTime">
+            </div>
+            <div class="field">
+                <label>End</label>
+                <input type="time" id="endTime">
+            </div>
+            <div class="field">
+                <label>Color</label>
+                <input type="color" id="taskColor" value="#3498db">
+            </div>
+            <button id="addBtn">Add</button>
+        </div>
+
+        <p class="status-msg" id="statusMsg">Ready to schedule.</p>
+
+        <div class="task-list" id="taskList"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
