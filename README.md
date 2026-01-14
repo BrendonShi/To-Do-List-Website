@@ -9,7 +9,7 @@ All schedules are automatically saved to a postgres database, which in this case
 ## Prerequisites
 You need **Python**, **Flask** installed on your computer.
 
-## Installation (Windows)
+## Installation
 
 1. **Clone or Download** this repository to your local machine.
    ```bash
@@ -19,18 +19,20 @@ You need **Python**, **Flask** installed on your computer.
    ```bash
    cd day-scheduler
    ```
-3. **Create virtual environment**
-   ```bash
-   python -m venv .venv
-   ```
-4. **Activate virtual environment**
-   ```bash
-   .venv/Scripts/activate
-   ```
-5. **Install `flask`, `psycopg2-binary`, `python-dotenv`** (the web framework):
-   ```bash
-   pip install flask psycopg2-binary python-dotenv
-   ```
+
+## (Windows)
+
+***Python must be installed on the machine.***
+
+Launch `setup.bat`, it will create python virtual environment, and install `flask`, `psycopg2-binary`, `python-dotenv` libraries.
+
+## (MacOS)
+
+***Python must be installed on the machine.***
+
+You need to launch `setup.command`, but first, you must give it permission to run. Open your terminal, navigate to the folder, and type: chmod +x setup.command, then double click it. It will create python virtual environment, and install flask, psycopg2-binary, python-dotenv libraries.
+
+---
 
 ## How to Run
 
