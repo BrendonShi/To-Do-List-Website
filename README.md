@@ -20,13 +20,13 @@ You need **Python**, **Flask** installed on your computer.
    cd day-scheduler
    ```
 
-## (Windows)
+### (Windows)
 
 ***Python must be installed on the machine.***
 
 Launch `setup.bat`, it will create python virtual environment, and install `flask`, `psycopg2-binary`, `python-dotenv` libraries.
 
-## (MacOS)
+### (MacOS)
 
 ***Python must be installed on the machine.***
 
