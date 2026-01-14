@@ -2,35 +2,37 @@
 
 ![NVIDIA_Overlay_6eUH37isLV](https://github.com/user-attachments/assets/48626073-fa57-4e18-9a36-7239cd771ab4)
 
-It is a simple, effective productivity tool built with Flask, HTML, CSS, and JavaScript. It allows you to schedule specific time blocks and plays a custom alarm sound at the start and end of every task.
+It is a simple, effective productivity tool built with Flask, HTML, CSS, and JavaScript, with PostgreSQL database. It allows you to schedule specific time blocks and plays a custom alarm sound at the start and end of every task.
 
-All schedules are automatically saved to a local SQLite database, so your plan persists even after you close the browser.
+All schedules are automatically saved to a postgres database, which in this case is connected to an online hosting server "console.neon.tech" (so you do not need to install PostgreSQL on your local machine).
 
 ## Prerequisites
 You need **Python**, **Flask** installed on your computer.
 
-## Installation (Windows)
+## Installation
 
 1. **Clone or Download** this repository to your local machine.
    ```bash
    git clone "repository-link"
    ```
-3. **Navigate to the project folder** in your terminal/command prompt:
+2. **Navigate to the project folder** in your terminal/command prompt:
    ```bash
    cd day-scheduler
    ```
-4. **Create virtual environment**
-   ```bash
-   python -m venv .venv
-   ```
-5. **Activate virtual environment**
-   ```bash
-   .venv/Scripts/activate
-   ```
-3. **Install Flask** (the web framework):
-   ```bash
-   pip install flask
-   ```
+
+### (Windows)
+
+***Python must be installed on the machine.***
+
+Launch `setup.bat`, it will create python virtual environment, and install `flask`, `psycopg2-binary`, `python-dotenv` libraries.
+
+### (MacOS)
+
+***Python must be installed on the machine.***
+
+You need to launch `setup.command`, but first, you must give it permission to run. Open your terminal, navigate to the folder, and type: chmod +x setup.command, then double click it. It will create python virtual environment, and install flask, psycopg2-binary, python-dotenv libraries.
+
+---
 
 ## How to Run
 
