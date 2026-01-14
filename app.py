@@ -4,6 +4,10 @@ from flask import Flask, render_template, request, jsonify
 from psycopg2.extras import RealDictCursor
 from get_db import get_db_connection, init_db
 
+# comment two lines below if changed get_db.py to local db connection
+from dotenv import load_dotenv
+load_dotenv()  # loads the variable from the .env file
+
 
 app = Flask(__name__)
 

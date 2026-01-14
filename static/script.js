@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             statusMsg.textContent = `Saved: ${nameVal}`;
         })
         .catch(err => {
-            statusMsg.textContent = "Error saving. Did you delete schedule.db?";
+            statusMsg.textContent = "Error saving task.";
             console.error(err);
         });
     });
