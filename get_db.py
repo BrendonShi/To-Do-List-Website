@@ -1,36 +1,24 @@
-import psycopg2
-import os
+import sqlite3
 
 
 def get_db_connection():
-    database_url = os.getenv("DATABASE_URL")
-    
-    if not database_url:
-        raise ValueError("DATABASE_URL is not set. Check your .env file!")
-
-    conn = psycopg2.connect(database_url)
+    conn = sqlite3.connect('schedule.db')
+    conn.row_factory = sqlite3.Row
     return conn
 
-
-
 def init_db():
-    try:
-        conn = get_db_connection()
-        with conn.cursor() as cur:
-            cur.execute("""
-            CREATE TABLE IF NOT EXISTS tasks (
-                id SERIAL PRIMARY KEY,
-                name TEXT NOT NULL,
-                start_time TEXT NOT NULL,
-                end_time TEXT NOT NULL,
-                color TEXT NOT NULL
-            );
-            """)
-            conn.commit()
-            print("Table initialization successful")
-        conn.close()
-    except Exception as e:
-        print(f"------------\nDB INIT FAILED: {e}\n------------")
+    conn = get_db_connection()
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS tasks (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            start_time TEXT NOT NULL,
+            end_time TEXT NOT NULL,
+            color TEXT NOT NULL
+        )
+    ''')
+    conn.commit()
+    conn.close()
 
 
 
