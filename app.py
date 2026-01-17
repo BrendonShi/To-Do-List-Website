@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from psycopg2.extras import RealDictCursor
 from get_db import get_db_connection, init_db
 
 
