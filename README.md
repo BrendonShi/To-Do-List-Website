@@ -1,4 +1,4 @@
-# Day Timer
+# Day Scheduler
 
 ![NVIDIA_Overlay_6eUH37isLV](https://github.com/user-attachments/assets/48626073-fa57-4e18-9a36-7239cd771ab4)
 
